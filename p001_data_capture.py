@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By\
 
 caminho = "Dados.xlsx"
 planilha_aberta = load_workbook(filename=caminho)
-sheet = planilha_aberta['Sheet1']
+sheet = planilha_aberta['Planilha1']
 
-for linha in range(2, len(sheet['A'] + 1)):
+for linha in range(2, len(sheet['A']) + 1):
     nome = sheet[f'A{linha}'].value
     email = sheet[f'B{linha}'].value
     telefone = sheet[f'C{linha}'].value
